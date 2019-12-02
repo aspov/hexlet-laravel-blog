@@ -6,7 +6,7 @@
 		{{ session('status') }}
 	    </div>
 	@endif
-	<a href="{{ route('articles.create') }}">Создать категорию</a>
+	<a href="{{ route('articles.create') }}">Создать новую статью</a>
 	{{Form::open(['url' => route('articles.index'), 'method' => 'get'])}}
         	{{Form::text('q', $q)}}
         	{{Form::submit('Search')}}

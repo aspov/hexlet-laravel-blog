@@ -23,11 +23,10 @@ class ArticleValidate extends FormRequest
      */
     public function rules()
     {
-        
-	$articleId = $this->route()->parameter('id');	
+        $articleId = $this->route()->parameter('id');
  
         return [
-            'name' => 'required|unique:articles,name,' . $articleId,
+            'name' => 'required|unique:articles, name,' . $articleId,
             'body' => 'required|min:5'
         ];
     }
